@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>Youtube Subscribe Button</p>
+  <button class="but1" onclick="
+   subButton();
+  ">Subscribe</button>
+  <br>
+  <br>
+  <br>
+  <p>Amazon Shipping Calculator</p>
+  <input type="text" placeholder="Cost of order"> 
+  <button onclick="
+   calculate();
+  ">Calculate</button>
+  <p class="output"></p>
+  <br><br><br>
+
+  <a href="main.html">Go to final Project</a>
+
+  <script>
+    const subscribeButton = document.querySelector('.but1')
+
+    function subButton() {
+      if (subscribeButton.innerHTML === 'Subscribe') {
+        subscribeButton.innerHTML = 'Subscribed';
+      } else {
+        subscribeButton.innerHTML = 'Subscribe';
+      }
+    }
+
+    
+    function calculate() {
+      let cost = document.querySelector('input');
+      let value = Number(cost.value);
+
+      if (value < 50) {
+        value += 10;
+      }
+
+      document.querySelector('.output').innerHTML = `$${value}`;
+    }
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+</html>
